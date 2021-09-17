@@ -1,0 +1,25 @@
+{
+  "name": "statusv11",
+  "version": "1.7.0",
+  "description": "Selfbot of Minecraft",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cart and HackerShader. 2Y2C on top",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "collect": "^0.3.5",
+    "discord.js-selfbot-v11": "^11.5.1",
+    "fs": "0.0.1-security",
+    "minecraft-server-util": "^3.5.2",
+    "mineflayer": "^3.7.0",
+    "mineflayer-tps": "^1.0.1",
+    "moment-timezone": "^0.5.33",
+    "os": "^0.1.1",
+    "pretty-ms": "^7.0.1",
+    "superagent": "^6.1.0",
+    "ws": "^7.5.0"
+  }
+}

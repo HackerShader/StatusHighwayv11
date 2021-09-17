@@ -1,0 +1,118 @@
+
+
+
+fs.readdir("./commands/", (err, files) => {
+	if(err) console.error(error)
+	let jsfiles = files.filter(f => f.split(".").pop() === "js")
+	if (jsfiles.length <= 0) {
+	  return console.log("No commands to log in FOLDER NAME")
+	}
+	console.log(`Loading ${jsfiles.length} commands from FOLDER NAME...`)
+	jsfiles.forEach((f,i) => {
+	  let props = require(`./commands/${f}`)
+	  console.log(`${i + 1}: ${f} loaded!`)
+	  bot.commands.set(f, props)
+	})
+  })
+
+
+let cmd = bot.commands.get(command+".js")
+    if (cmd) cmd.run(bot, message, args, prefix)
+
+
+
+    .addfield('Độ trễ của bot', `${Math.round(bot.ws.ping)}ms` ,false)
+
+
+ let method = args[0];
+    let firstNumber = Number(args[1]);
+    let secondNumber = Number(args[2]);
+    let thirdNumber = Number(args[3]);
+
+
+
+    const operations = ['add', 'remove'];
+
+    if(!method) return message.reply('please select add or remove');
+
+    if (!args[1]) return message.reply('please state first number');
+
+    if (!args[2]) return message.reply('please state second number');
+
+    if (!args[3]) return message.reply('please state third number');
+
+    if (isNaN(firstNumber)) return message.reply('number 1 missing');
+
+    if (isNaN(secondNumber)) return message.reply('number 2 missing');
+
+    if (isNaN(thirdNumber)) return message.reply('number 3 missing');
+
+    if (method === 'add') {
+
+        let doMath = firstNumber + secondNumber + thirdNumber
+        message.channel.send(`${firstNumber} + ${secondNumber} + ${thirdNumber} = ${doMath}`);
+
+        if (method === 'remove') {
+
+            let doMath = firstNumber - secondNumber - thirdNumber
+            message.channel.send(`${firstNumber} - ${secondNumber} - ${thirdNumber} = ${doMath}`);
+   }
+  }
+ }
+}if (msg.content === '$calc') {
+            return msg.reply('Hãy nhập số liệu tọa độ bắt đầu và tọa độ kết thúc (chỉ x hoặc z, không ghi cả tọa độ để bảo toàn tính mạng, không ghi dấu "-" vì bot sẽ tính sai, cái này do thằng devs ngu ok :))))\n| Cấu trúc: $calc (nơi bắt đầu) (nơi kết thúc) (tốc độ)\n| Ví dụ: $calc 60000 30000 ')
+        }
+
+        var a = Number(args[0]);
+        var b = Number(args[1]);
+        var e = Number(args[2])
+        var c = Number(b - a)
+        if (msg.content === `$calc ${a} ${b} ${e}`) {
+            const thoigian = c / e
+            const thoigian_phut = thoigian/60
+            const thoigian_gio = thoigian_phut/60
+            const km = c/1000
+            const loi1  = b - a;
+            if ( b < a ) {
+                return msg.reply(`số liệu điểm kết thúc thấp hơn số liệu điểm bắt đầu, vui lòng kiểm tra lại\n| Tìm lỗi, số liệu bạn nhập $calc ${a} ${b}\n| Kết quả nhận được: ${loi1}`)
+            }
+            msg.reply(`thời gian ước tính chặng đường của bạn (${c}m) (${km}km): ${thoigian_phut} phút (${thoigian_gio} giờ)`)  
+            
+            
+        } else msg.reply('Bạn đã nhập sai số liệu, vui lòng kiểm tra lại')
+    } 
+
+
+
+
+bot.on('message', message => {
+    console.log(`[${new Date()}] [${message.channel.name} (${message.guild.name})] ${message.author.tag} ${message.author.id} >> ${message.content}`)
+})
+
+
+name: `${prefix}help để biết thông tin`,
+			type: "WATCHING"
+
+const rpc = require('discord-rpc')('843425621060354110');
+ 
+client.updatePresence({
+  state: 'slithering',
+  details: '🐍',
+  startTimestamp: Date.now(),
+  endTimestamp: Date.now() + 1337,
+  largeImageKey: 'snek_large',
+  smallImageKey: 'snek_small',
+  instance: true,
+});
+
+
+
+const d = new Date(Date.now()+25200000)
+			msg.reply(`\n\nThời gian hiện tại là: ${d.getHours()} giờ ${d.getMinutes()} phút ${d.getSeconds()} giây  (${d.getDate()}/${d.getMonth() + 1}/${d.getFullYear()}) \nKhu vực: GMT+7`)
+
+
+
+
+
+
+    var roundedString = num.toFixed(2);
