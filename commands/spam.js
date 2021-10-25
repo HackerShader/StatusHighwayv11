@@ -20,6 +20,6 @@ module.exports = {
 		channel2.send(`=pay 485419430885457930 7000`).then(msg => msg.delete(5000))
 		}, 63000)
 
-            }else return msg.reply('giỏi đấy nhưng mình đéo chấp nhận')        
+            }else return msg.reply('err')        
 	}	
 }
